@@ -43,7 +43,7 @@ $png      = (new Barcode())->getBarcodeObj('QRCODE,M', $encoded, -6, -6, 'black'
 $e = fn($v) => htmlescape((string) $v);
 $option = fn($value, $label, $current) => '<option value="' . $e($value) . '"' . ((string) $value === (string) $current ? ' selected' : '') . '>' . $e($label) . '</option>';
 
-Html::header('Agent QR Code', '', 'config', 'plugin');
+Html::header('Agent QR Code', '', 'config', PluginAgentqrcodeMenu::class);
 echo '<div class="container-fluid"><div class="row g-4">';
 
 echo '<div class="col-lg-6"><form method="post" action="' . $e($self) . '" class="card"><div class="card-body">';

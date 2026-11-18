@@ -19,7 +19,7 @@ The deeplink is `https://deeplink-agent.glpi-project.org/?data=<same base64>`. I
 ## Usage
 
 1. In GLPI, create an OAuth client: Setup › OAuth clients, grant *Client credentials*, scope *inventory*.
-2. Setup › Plugins › Agent QR Code: choose that client, adjust the options and save.
+2. Setup › Agent QR Code: choose that client, adjust the options and save.
 3. In the app: Advanced settings › Server list › Add › QR Code, then scan.
 
 ## Security

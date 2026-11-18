@@ -1,8 +1,9 @@
 <?php
 
-define('PLUGIN_AGENTQRCODE_VERSION', '1.0.0');
+define('PLUGIN_AGENTQRCODE_VERSION', '1.1.0');
 
 require_once __DIR__ . '/src/Payload.php';
+require_once __DIR__ . '/src/Menu.php';
 
 function plugin_version_agentqrcode()
 {
@@ -34,5 +35,6 @@ function plugin_init_agentqrcode()
     // The page shows the OAuth client secret, so only profiles that can change the GLPI setup see it.
     if (Session::haveRight('config', UPDATE)) {
         $PLUGIN_HOOKS['config_page']['agentqrcode'] = 'front/config.php';
+        $PLUGIN_HOOKS['menu_toadd']['agentqrcode']  = ['config' => [PluginAgentqrcodeMenu::class]];
     }
 }
